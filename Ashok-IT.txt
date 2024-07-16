@@ -1,0 +1,269 @@
+Trainer: Mr. Ashok (9+ Yrs Exp)
+Course Content
+1) DevOps Introduction (What is DevOps, SDLC, Waterfall, Agile)
+2) Linux with Shell Scripting
+3) AWS Cloud (15+ Services)
+4) DevOps Tools (10+ Tools)
+(Git Hub, Maven, Jenkins, SonarQube, Ansible, Terraform, Docker, K8S, ELK...)
+5) Projects
+
+Development Team (Programmers)
+-> Collect Requirements
+-> Analyze Requirements
+-> Planning (Designing) -> Implementation (Coding)
+-> Testing
+-> Code Integration
+Operations Team (Support Engineers)
+-> Setup machines
+-> Setup Network
+-> Setup Servers
+-> Setup Database
+-> Prepare Infrastructure for Project execution
+-> Take proiect code from Repository (GitHub)
+
+========================================================================================================================
+
+-> Setup machines
+-> Setup Network
+-> Setup Servers
+-> Setup Database
+-> Prepare Infrastructure for Project execution
+-> Take project code from Repository (GitHub)
+-> Perform Project Build (Compile)
+-> Package Project (jar or war)
+-> Deploy Project to Server.
+
+-> Development is doing by one team and Operations are doing by another team. There should be colloboration between Development Team and Operations team to Deliver Project to client quickly with Quality thats where DevOps culture came into market.
+-> If there is no communication between Development and Operations teams then project delivery will become slow and client will loose his business.
+
+=========================================================================================================================
+Infrastructure Setup
+=========================================================================================================================
+
+-> To run a project we need to prepare environment
+-> Environment means the platform which is used to run our project
+
+-> Computers
+-> Network
+-> Power
+-> Air Conditioner
+-> Web Servers
+-> Database Servers
+-> Storage
+-> Security
+
+
+-> Some companies will purchase and setup infrastructure that is called on On-Premises Infrastructure.
+
+-> If we setup on-prem infrastructure then we have to purchase, setup & manage everything required for project.
+
+-> It requires lot of money and time.
+
+-> Instead of setting up on-prem infrastructure we can go for "Cloud Infrastructure".
+
+-> If we go for Cloud Infrastructure we can take all the software's for Rent then Cloud Provider will manage     
+
+   infrastructure.
+
+-> We just need to use infrastructure and pay money for our usage.
+
+ Note: AWS is one of the leading Cloud Provider available in the market
+
+=========================================================================================================================
+Linux
+=========================================================================================================================
+
+-> Linux is free and opensource operating system
+
+-> In realtime, We will use Linux OS to setup Infrastructure
+
+-> We will use Shell Scripting to automate our regular work
+(server restart, data backup, logs backup, temp files delete etc...)
+
+=> After Learning Linux & AWS we can setup infrastructure in AWS Cloud
+
+=========================================================================================================================
+Build & Deployment
+=========================================================================================================================
+
+-> Developers will develop project using one programming language
+
+Ex: Java, Python, C#, PHP etc....
+
+-> Developers will write code using programming language
+
+-> Developers will keep code in Repository
+Ex: SVN, GitHub, Bitbucket etc...
+
+-> DevOps engineer should take that code from Repository
+
+-> DevOps engineer should perform Project Build and Deployment
+
+-> Project Build means converting the project code into executable format
+
+-> Project Deployment means keeping project executable file into server
+
+-> After Deployment then Deliver project to client
+
+
+********** Code ====> Git Hub ====> Build ====> Deploy ===> Deliver **********
+
+
+=========================================================================================================================
+
+-> To automate Build & Deployments we will use Several Tools
+
+
+DevOps Tool Chain
+
+
+Build Tools            : Maven or Gradle
+Repository             : Git Hub or Bitbucket
+Deployment Code Review : Jenkins or Bamboos
+Code Review            : Sonar Qube or Sonarlint
+Configuration          : Chef / Puppet / Ansible
+Containers             : Docker
+Orachestration         : Kubernetes
+App Monitoring         : New Relic
+Log Monitoring         : Graphana or Promethus
+Artifacts              : Nexus / JFrog
+Infrastructure         : Terraform (Infrastructure as a code
+
+=========================================================================================================================
+
+Software Developement Life Cycle ( SDLC )
+
+=========================================================================================================================
+The process of implementing software project from beginning to ending is called as Software Development Life Cycle
+
+-> Software Development Life Cycle having several phases
+
+1) Requirements Gathering
+2) Analysis
+3) Design / Planning
+4) Implementation / Development
+5) Testing
+6) Deployment
+7) Deliver
+8) Maintenance
+
+
+-> There are several SDLC methodologies are available
+
+1) Waterfall
+
+2) Agile
+
+
+Waterfall Methodology
+=====================
+
+> Waterfall is the first methodology that got introduced in SDLC
+
+-> Waterfall Methodology follows Linear approach
+
+-> In this methodology, after completing one step then only we will go for next step
+
+-> In waterfall methodology we can't go in backward direction (only forward direction)
+
+-> Requirements & Budget is fixed for the project
+
+-> Client involvement is very less in the project
+
+-> Client will see the project at the end of SDLC
+
+Note: Waterfall is recommended only for small scale applications. It is not recommended for Large Scale applications.
+
+=========================================================================================================================
+Agile Methodology
+
+
+-> In today's world every day the requirements are changing to meet customer needs.
+
+-> Now a days, IT companies are following Agile methodology to develop and deliver the project
+
+-> In Agile methodology Requirments are not fixed and Budget is also not fixed
+
+Note: In Agile methodology, Client can change requirement at point of time.
+
+-> Agile is an "Iterative" approach to develop and deliver the project to client
+
+-> In Agile methodology Development & Testing will happen collaboratively.
+
+=========================================================================================================================
+-> To run web applications we need a server
+-> For Java web applications we can use below servers
+a) Apache Tomcat
+b) JBoss
+c) Oracle - Weblogic
+d) IBM - WebSphere
+e) Glassfish etc...
+
+for .Net applications we need to use IIS server provided by Microsoft.
+
+
+Apache Tomcat Folder Structure
+++++++++++++++++++++++++++++++
+
+bin: It contains commands to start and stop tomcat server
+
+conf: It contains configuration files
+
+lib: It contains libraries (jar files)
+
+logs: It contains server log files
+
+temp: Temp files will be created here (we can delete them)
+
+webapps: This is called as deployment folder
+
+Note: We will keep war file in webapps folder for deployment.
+
+=========================================================================================================================
+
+Working with Apache Tomact in Linux
+
+-> Login into AWS Management Console
+-> Create EC2 Instance (Amazon Linux AMI)
+-> Connect to EC2 instance using MobaXterm (.pem file) /putty (ppk file)
+-> install java software using below command
+$ sudo yum install java-1.8.0-openjdk
+-> Verify the version of java installed in our machine
+$ java -version
+Note: If we have multiple java versions installed then we can switch to particular version using below command
+
+$ alternatives --config java
+
+-> We can download apache tomcat from official website
+URL : https://tomcat.apache.org/download-90.cgi
+
+-> We can find Apache tomcat URLs to download in official website downloads page
+
+-> Copy the URL of tar file and execute below command in linux machine 
+
+$ wget <tomact-url>
+
+
+Note: I am using https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.63/bin/apache-tomcat-9.0.63.tar.gz
+
+-> After tomact tar file got downloaded then extract Tomcat Tar file using below command
+$ tar -xvf <tomact-tar-file-name>
+Go inside tomcat folder and see folder structure
+
+-> Go inside tomcat folder and see folder structure
+$ cd tomact-folder - apache-tomcat-9.0.91
+$ ls -ltr
+-> Go to tomact bin directory and run tomact server
+$ cd bin
+$ ./startup.sh
+I
+Note: Tomcat Server runs on 8080 port by default. Enable this port in security group as custom tcp
+Type: Custom TCP
+Protoal: TCP
+Port Range: 8080
+Source: Custom (0.0.0.0/0)
+-> Access Tomact server from your browser
+
+-> vi context.xml to edit context.xml file in Linux vm
+
+
